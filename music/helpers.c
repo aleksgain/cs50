@@ -3,7 +3,7 @@
 #include <cs50.h>
 #include <string.h>
 #include <math.h>
-#include<stdio.h>
+#include <stdio.h>
 
 #include "helpers.h"
 
