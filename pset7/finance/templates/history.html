@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Operation</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{stock.id}}</td>
+                    <td>{{stock.ticker}}</td>
+                    <td>{{stock.amount}}</td>
+                    <td>{{stock.type}}</td>
+                    <td>{{stock.price}}</td>
+                    <td>{{stock.price * stock.amount}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
